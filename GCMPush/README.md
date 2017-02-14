@@ -25,9 +25,9 @@ PushNotificationController.registerPushObserver(new PushNotificationController.P
 
 <!-- PUSH NOTIFICATION GCM -->
 <uses-permission android:name="android.permission.INTERNET" />
-<permission android:name="br.com.netpoint.integraapp.permission.C2D_MESSAGE"
+<permission android:name="[package].permission.C2D_MESSAGE"
     android:protectionLevel="signature" />
-<uses-permission android:name="br.com.netpoint.integraapp.permission.C2D_MESSAGE" />
+<uses-permission android:name="[package].permission.C2D_MESSAGE" />
 
 <application>
     <!-- Push Notification -->
@@ -38,7 +38,7 @@ PushNotificationController.registerPushObserver(new PushNotificationController.P
         <intent-filter>
             <action android:name="com.google.android.c2dm.intent.RECEIVE" />
             <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
-            <category android:name="br.com.netpoint.integraapp" />
+            <category android:name="[package]" />
         </intent-filter>
     </receiver>
     <service
